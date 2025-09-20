@@ -28,10 +28,12 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-list a:hover {
-  text-decoration: underline;
+  color: #FF6600; /* subtle hover color */
+  transform: translateY(-2px); /* slight lift */
 }
 
 /* Header */
@@ -40,6 +42,11 @@ header {
   color: white;
   padding: 2rem 1rem;
   text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+header:hover {
+  background-color: #005A99; /* subtle header color shift on hover */
 }
 
 header h1 {
@@ -62,12 +69,13 @@ section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.4s ease;
 }
 
 section.visible {
   opacity: 1;
   transform: translateY(0);
+  background-color: #fdfdfd; /* subtle highlight as section appears */
 }
 
 section h2 {
@@ -93,38 +101,62 @@ li:hover {
   background-color: #e6f0fa;
 }
 
+/* Project links hover animation */
 li a {
   color: #007ACC;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #FF6600;
+  transition: width 0.3s ease;
 }
 
 li a:hover {
-  text-decoration: underline;
+  color: #FF6600;
+  transform: translateX(5px);
+}
+
+li a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #FF6600;
 }
 
 /* Contact links */
 #contact a {
   color: #007ACC;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 #contact a:hover {
+  color: #FF6600;
   text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   header h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   header p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .nav-list {
-      flex-direction: column;
-      gap: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
