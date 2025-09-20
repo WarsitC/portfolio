@@ -1,8 +1,7 @@
-/* General Styles */
+/* Reset some default styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #f5f5f5;
   color: #333;
@@ -10,9 +9,9 @@ body {
 
 /* Header */
 header {
-  background-color: #007acc;
+  background-color: #007ACC; /* nice blue header */
   color: white;
-  padding: 40px 20px;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -22,48 +21,62 @@ header h1 {
 }
 
 header p {
-  margin: 5px 0 0 0;
+  margin: 0.5rem 0 0;
   font-size: 1.2rem;
 }
 
 /* Sections */
 section {
   max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 2rem auto;
+  padding: 1rem;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Section Headings */
-h2 {
-  color: #007acc;
-  border-bottom: 2px solid #007acc;
-  padding-bottom: 5px;
+section h2 {
+  border-bottom: 2px solid #007ACC;
+  padding-bottom: 0.5rem;
 }
 
-/* Lists */
+/* Projects list */
 ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
 }
 
 li {
-  margin-bottom: 15px;
+  margin: 1rem 0;
 }
 
-/* Links */
-a {
-  color: #007acc;
+li a {
+  color: #007ACC;
   text-decoration: none;
+  font-weight: bold;
 }
 
-a:hover {
+li a:hover {
   text-decoration: underline;
 }
 
-/* Contact section */
-#contact p {
-  margin: 5px 0;
+/* Contact links */
+#contact a {
+  color: #007ACC;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  header p {
+      font-size: 1rem;
+  }
 }
