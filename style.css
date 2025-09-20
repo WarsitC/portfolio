@@ -1,31 +1,69 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  a {
-    color: #007acc;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0 0 0;
+  font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Headings */
+h2 {
+  color: #007acc;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 5px;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Contact section */
+#contact p {
+  margin: 5px 0;
+}
